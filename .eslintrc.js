@@ -1,38 +1,43 @@
 module.exports = {
   root: true,
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     es6: true
   },
   parserOptions: {
-    project: "./tsconfig.json",
+    project: './tsconfig.json',
     ecmaVersion: 2019,
     ecmaFeatures: {
-      "jsx": true
+      jsx: true
     },
-    sourceType: "module"
+    sourceType: 'module'
   },
   settings: {
     react: {
-      version: "detect"
+      version: 'detect'
     }
   },
   extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react'
   ],
-  plugins: ["@typescript-eslint", "prettier", "react"],
+  plugins: ['@typescript-eslint', 'prettier', 'react'],
   rules: {
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
         singleQuote: true,
         semi: false
       }
-    ]
+    ],
+    '@typescript-eslint/camelcase': 0,
+    '@typescript-eslint/explicit-member-accessibility': 0,
+    '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/explicit-function-return-type': 0,
+    '@typescript-eslint/no-unused-vars': 2
   }
 }
